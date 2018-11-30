@@ -1,0 +1,11 @@
+---
+- name: Ensure notepad++ is installed using chocolatey
+  win_chocolatey:
+    name: notepadplusplus
+    state: present
+
+- name: Create localadmin user and place in Administrators group
+  win_user:
+    name: localadmin
+    password: "P@ssw0rd1!"
+    groups: ["Administrators"]
